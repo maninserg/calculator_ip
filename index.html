@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>IP Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar mb-5" style="background-color: #e3f2fd;">
+            <div class="container-fluid d-flex justify-content-start">
+                    <i class="fa-solid fa-calculator d-inline-block align-text-top"></i>
+                    <a class="navbar-brand p-2" href="#"><strong>IP Calculator</strong> </a>
+            </div>
+        </nav>
+        <form action="" class="row" name="calculateIP" id="calculateIP" method="post">
+            <div class="mb-3 col-auto">
+                <input type="text" class="form-control" id="ipAddress" name="ipAddress" placeholder="IP address net/host">
+            </div>
+            <div class="mb-3 col-auto">
+                <input type="text" class="form-control" id="netmask" name="netmask" placeholder="Prefix net">
+            </div>
+
+<!--
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="subnetmask" name="subnetmask"
+                        placeholder="Prefix subnet/supernet">
+                </div>
+-->
+
+            <div class="col-auto">
+                <button id="btnSubmit" type="submit" class="btn btn-primary mb-3">Calculate</button>
+            </div>
+        </form>
+        <div class="results">
+            <hr>
+            <div class="row justify-content-center mb-3">
+                <div class="col-auto">
+                    <h2><strong>Results</strong></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Source Address:</strong>
+                </div>
+                <div id="resultIP" class="col-lg-4"></div>
+                <div id="resultIPBin" class="col-lg-4 font-monospace"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Source Netmask:</strong>
+                </div>
+                <div class="col-lg-4" id="resultNetMask"></div>
+                <div class="col-lg-4 font-monospace" id="resultNetMaskBin"></div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-2">
+                    <strong>Network:</strong>
+                </div>
+                <div class="col-lg-4" id="resultNetDecAddr"></div>
+                <div class="col-lg-4 font-monospace" id="resultNetBinAddr"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Broadcast:</strong>
+                </div>
+                <div class="col-lg-4" id="resultBroadcastDecAddr"></div>
+                <div class="col-lg-4 font-monospace" id="resultBroadcastBinAddr"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>HostMin:</strong>
+                </div>
+                <div class="col-lg-4" id="resultHostMin"></div>
+                <div class="col-lg-4 font-monospace" id=""></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>HostMax:</strong>
+                </div>
+                <div class="col-lg-4" id="resultHostMax"></div>
+                <div class="col-lg-4 font-monospace" id=""></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Hosts/Nets:</strong>
+                </div>
+                <div class="col-lg-4" id="resultNumberHosts"></div>
+                <div class="col-lg-4 font-monospace" id=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
